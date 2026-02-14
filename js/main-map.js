@@ -56,7 +56,7 @@ fetch(GEOJSON_FILE)
   });
 
 
-// -------------------- DATA LOAD ------------------------------
+// -------------------- INDEXING ------------------------------
 function buildIndices(geojson) {
   dates = [];
   sitesById = new Map();
@@ -169,7 +169,7 @@ function renderForDateIndex(idx) {
       fillOpacity: 0.6
     });
 
-    // hover for exact numbers (what you wanted)
+    // hover for exact numbers
     marker.bindTooltip(
       "<strong>" + (p.SiteName || "Unknown site") + "</strong><br>" +
       "Region: " + (p.RegionName || "—") + "<br>" +
