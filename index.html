@@ -8,14 +8,45 @@
 </head>
 <body> 
     <header class  = "page-header">
-        <h1>IDP Sites -- Population Over Time</h1>
-        <p class=""subtitle>
+        <h1>IDP Sites — Population Over Time</h1>
+        <p class="subtitle">
             Proportional symbols show reported total population (<code>TotPop</code>) for each site.
             Use the slider to step through survey dates. Values are "last observed" population as of 
             the selected date
         </p>    
     </header>
 
+    <section class = "controls">
+        <div class = "control-row">
+            <div class = "time-readout">
+                <span class = "label">Survey date: </span>
+                <span id = "timeLabel" class = "value">-</span>
+            </div>
+        </div>
+
+        <input id="timeSlider" type="range" min="0" max="0" value="0" step="1" disabled />
+        <div class="slider-hint">Drag the slider to explore change over time.</div>
+    </section>
+
+    <section class="map-wrap">
+    <div id="map0"></div>
+    </section>
+
+
+    <header class="page-header">
+        <h1>Regional Overview — IDP Camps</h1>
+        <p class="subtitle">
+            Choropleth represents the historic number of IDP camps active between 2017 and 2023 (<code>count</code>) for each region.
+            Hover over a region to view the exact number of IDPs.
+        </p>
+    </header>
+
+    <section class = "map-wrap">
+    <div id="map"></div>
+    </section>
     
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src= 'js/main-map.js'></script>
+    <script src= 'js/secondary-map.js'></script>
 </body>
 </html>
